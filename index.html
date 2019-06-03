@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+    input{
+        width:70px;
+    }
+    </style>
+
+    <div class="container">
+        <h1 style="text-align: center;margin-bottom:30px;font-weight: bold;">Calculez votre devis</h1>
+        <form action="">
+            <div class="row">
+                <div id="a_masquer" class="col-sm-4" style="display:none">
+                    <input id="action1clic" onclick="action1()" class="mb-2" type="number" value="" min="0" name="Comptabilité"
+                        > Comptabilité<br>
+                    <input id="action2clic" onclick="action2()" class="mb-2" type="number" value="" min="0" required="" name="Compta connectée"
+                        > Compta
+                    connectée<br>
+                    <input id="action3clic" onclick="action3()" class="mb-2" type="number" value="" min="0" name="Immobilise"
+                       > Immobilisé<br>
+                    <input id="action4clic" onclick="action4()" class="mb-2" type="number" value="" min="0" name="Analytique"
+                        > Analytique<br>
+                    <input id="action5clic" onclick="action5()" class="mb-2" type="number" value="" min="0" name="Budgétaire"
+                    > Budgétaire<br>
+                    <input id="action6clic" onclick="action6()" class="mb-2" type="number" value="1" min="0" name="ISOC"
+                        checked disabled> ISOC<br>
+                    <input id="action7clic" onclick="action7()" class="mb-2" type="number" value="" min="0" name="Facturation de base"
+                       >
+                    Facturation de base<br>
+                    <input id="action8clic" onclick="action8()" class="mb-2" type="number" value="" min="0" name="Législation lux"
+                        > Législation
+                    lux<br>
+                    <div id="a_masquer" class="mt-5 center-block">
+                        <p style="border:3px solid black; color: white; background-color: black">Prix:</p>
+                        <div class="affichage" id="affichage">0 €</div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p>Vous êtes:</p>
+
+                    <input onclick="masquer_div('a_masquer');" class="mb-2" type="radio" name="formeJuridique" value=""
+                        required="">FIDUCIAIRE<br>
+                    <input onclick="masquer_divpme('a_masquerpme');" class="mb-2" type="radio" name="formeJuridique"
+                        value="2" required="">PME<br>
+                    <input class="mb-2" type="radio" name="formeJuridique" value="3" required="">ASBL<br>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="calcul.js"></script>
+</body>
+
+</html>
